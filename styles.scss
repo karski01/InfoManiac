@@ -1,0 +1,506 @@
+$base-color: #222222;
+$bar-color: #3E3E3E;
+$text-color: #FFFFFF;
+$font-inika-R: 'Inika-Regular', 'Bitter SemiBold';
+$font-inika-B: 'Inika-Bold', 'Bitter SemiBold';
+$font-publicsans-SB: 'PublicSans-SemiBold';
+$font-publicsans-M: 'PublicSans-Medium';
+$border-radius: 10rem !default;
+$box-shadow: 0 0.5rem 1rem rgba(black, 0.25) !default;
+$title-size: 2rem;
+$subtitle-size: 1.3em;
+$paragraph-size: 1rem;
+
+
+
+
+// Fonts
+@font-face {
+    font-family: 'Inika-Regular';
+    src: url(font/Inika-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Inika-Bold';
+    src: url(font/Inika-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'PublicSans-Medium';
+    src: url(font/PublicSans-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'PublicSans-SemiBold';
+    src: url(font/PublicSans-SemiBold.ttf) format('truetype');
+}
+
+// Head
+
+html {
+    background-color: $base-color;
+    margin: 0;
+}
+
+.header-bar {
+    background-color: $bar-color;
+    height: 1.5rem;
+}
+
+.logo-container {
+    display: flex;
+    margin-top: 0.2rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    max-width: 18rem;
+}
+
+.quote-txt {
+    color: $text-color;
+    font-family: $font-inika-R;
+    font-size: 1.2rem;
+    text-align: center;
+    position: relative;
+    margin-top: -2rem;
+    padding-bottom: 2rem;
+}
+
+
+// Scroll-up button
+
+#scroll-button {
+    display: inline-block;
+    background-color: $bar-color;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#scroll-button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#scroll-button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#scroll-button:active {
+    background-color: #555;
+}
+
+#scroll-button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+// Menu
+
+.menu-container {
+    background-color: $bar-color;
+    height: 3.5rem;
+    max-width: 40em;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    margin: 0 auto;
+}
+
+/**a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+**/
+
+.menu-navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.menu-navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-navbar li {
+    border-radius: 20px;
+    font-family: $font-publicsans-SB;
+    padding: 10px;
+    margin: 10px 10px;
+    color: $text-color;
+}
+
+.menu-navbar li:active {
+    font-weight: bold;
+}
+
+.menu-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.menu-navbar li.active {
+    font-weight: bold;
+}
+
+a:link {
+    text-decoration: none;
+    color: $text-color;
+}
+
+a:visited {
+    text-decoration: none;
+    color: $text-color;
+}
+
+a:hover {
+    text-decoration: none;
+    color: $text-color;
+}
+
+a:active {
+    text-decoration: none;
+    color: $text-color;
+}
+
+
+//
+//
+//
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    z-index: 2;
+}
+
+.button-text {
+    color: $text-color;
+    font-family: $font-inika-B;
+    font-size: 0.8rem;
+    text-decoration: none;
+    position: relative;
+}
+
+// Main
+
+.section {
+    margin: 1rem;
+    padding-top: 50px;
+}
+
+.title-text {
+    color: $text-color;
+    font-family: $font-publicsans-SB;
+    font-size: $title-size;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.subtitle-text {
+    color: $text-color;
+    font-family: $font-publicsans-SB;
+    font-size: $subtitle-size;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.paragraph-text {
+    color: $text-color;
+    font-family: $font-publicsans-M;
+    font-size: $paragraph-size;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    max-width: 70vw;
+}
+
+// Test
+// Test
+// Test
+
+
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/*Button
+.btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+*/
+
+// Slider
+// Slider
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    max-width: 100vw;
+    height: 500px;
+    margin: auto;
+}
+
+.slide {
+    display: flex;
+    flex: 0 0 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    transform: translateX(100%);
+}
+
+.slide.active {
+    transform: translateX(0);
+}
+
+.text-box {
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 30%;
+}
+
+.slide-img {
+    object-fit: cover;
+    flex: 3;
+    width: 70px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+    cursor: pointer;
+    outline: none;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+// Background colors for each slide
+
+#slide1 {
+    background-color: #93bebc;
+}
+
+#slide2 {
+    background-color: #0767b2;
+}
+
+#slide3 {
+    background-color: #d89069;
+}
+
+#slide4 {
+    background-color: #279e45;
+}
+
+#slide5 {
+    background-color: #d0c41e;
+}
+
+
+
+// Tablet 
+@media screen and (max-width: 768px) {
+    .slide {
+        flex-direction: column;
+    }
+
+    .text-box {
+        order: 2;
+        width: 100%;
+        padding: 2em;
+    }
+
+    .slide-img {
+        width: 100%;
+    }
+}
+
+// Mobile 
+@media screen and (max-width: 480px) {
+    .slide {
+        flex-direction: column;
+    }
+
+    .text-box {
+        order: 2;
+        width: 100%;
+        padding: 1em;
+    }
+
+    .slide-img {
+        width: 100%;
+    }
+}
+
+// Test
+// Test
+// Test
+
+// Quiz
+
+.quiz-container {
+    max-width: 60vw;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border-radius: 10px;
+    border: 2px solid #cbcbcb;
+    box-shadow: $box-shadow;
+    min-width: 200px;
+}
+
+.quiz-container h1 {
+    background: $bar-color;
+    color: #fff;
+    font-family: $font-publicsans-SB;
+    font-size: 50px;
+    text-align: center;
+    padding: 2px 0 13px 0;
+    border-radius: 10px;
+}
+
+#question {
+    font-family: $font-publicsans-M;
+    font-size: 20px;
+    color: #5a6772;
+}
+
+.button-grp {
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+#btn0,
+#btn1,
+#btn2,
+#btn3 {
+    background: $bar-color;
+    width: 200px;
+    font-family: $font-publicsans-M;
+    font-size: 16px;
+    border: 1px solid #1d3c6a;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 10px 10px;
+    color: #fff;
+}
+
+#btn0:hover,
+#btn1:hover,
+#btn2:hover,
+#btn3:hover {
+    cursor: pointer;
+    background: #2D85A4;
+}
+
+#btn0:focus,
+#btn1:focus,
+#btn2:focus,
+#btn3:focus {
+    outline: 0;
+}
+
+#progress {
+    color: #2b2b2b;
+    font-family: $font-publicsans-M;
+    font-size: 18px;
+}
+
+
+//
+//
+
+
+.link {
+    color: #2387e4;
+}
+
+ul,
+li {
+    margin: 2rem;
+}
