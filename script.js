@@ -115,7 +115,7 @@ function guess(id, guess) {
 function showProgress() {
     var currentQuestionNumber = quiz.questionIndex + 1;
     var element = document.getElementById('progress');
-    element.innerHTML = "Spørgsmål " + currentQuestionNumber + " of " + quiz.questions.length;
+    element.innerHTML = "Spørgsmål " + currentQuestionNumber + " af " + quiz.questions.length;
 }
 
 
