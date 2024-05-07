@@ -40,10 +40,10 @@ const stopSlideShow = () => clearInterval(slideInterval);
 
 document.querySelector('.slider-container').addEventListener('mouseenter', stopSlideShow);
 
-document.querySelector('.slider-container').addEventListener('mouseleave', startSlideShow);
+//document.querySelector('.slider-container').addEventListener('mouseleave', startSlideShow);
 
 showSlide(currentSlide);
-startSlideShow();
+//startSlideShow();
 
 
 //quiz

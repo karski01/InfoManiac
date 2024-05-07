@@ -36,7 +36,7 @@ html {
 }
 
 .quote-txt {
-  color: #FFFFFF;
+  color: #e0e0e0;
   font-family: "Inika-Regular", "Bitter SemiBold";
   font-size: 1.2rem;
   text-align: center;
@@ -68,7 +68,7 @@ html {
   font-style: normal;
   font-size: 2em;
   line-height: 50px;
-  color: #fff;
+  color: #e0e0e0;
 }
 
 #scroll-button:hover {
@@ -94,14 +94,6 @@ html {
   margin: 0 auto;
 }
 
-/**a {
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-**/
 .menu-navbar {
   top: 0;
   left: 0;
@@ -122,7 +114,7 @@ html {
   font-family: "PublicSans-SemiBold";
   padding: 10px;
   margin: 10px 10px;
-  color: #FFFFFF;
+  color: #e0e0e0;
 }
 
 .menu-navbar li:active {
@@ -134,7 +126,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .menu-navbar li.active {
@@ -143,22 +135,22 @@ html {
 
 a:link {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #e0e0e0;
 }
 
 a:visited {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #e0e0e0;
 }
 
 a:hover {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #e0e0e0;
 }
 
 a:active {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #e0e0e0;
 }
 
 .intersection {
@@ -179,9 +171,9 @@ a:active {
 }
 
 .button-text {
-  color: #FFFFFF;
+  color: #e0e0e0;
   font-family: "Inika-Bold", "Bitter SemiBold";
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-decoration: none;
   position: relative;
 }
@@ -195,7 +187,7 @@ a:active {
 }
 
 .title-text {
-  color: #FFFFFF;
+  color: #e0e0e0;
   font-family: "PublicSans-SemiBold";
   font-size: 1.8rem;
   padding-left: 1vw;
@@ -205,7 +197,7 @@ a:active {
 }
 
 .subtitle-text {
-  color: #FFFFFF;
+  color: #e0e0e0;
   font-family: "PublicSans-SemiBold";
   font-size: 1.2rem;
   padding-left: 1vw;
@@ -215,7 +207,7 @@ a:active {
 }
 
 .paragraph-text {
-  color: #FFFFFF;
+  color: #e0e0e0;
   font-family: "PublicSans-Medium";
   font-size: 0.9rem;
   padding-left: 1vw;
@@ -258,7 +250,7 @@ body {
 }
 */
 .slide-subtitle-text {
-  color: #FFFFFF;
+  color: #e0e0e0;
   font-family: "PublicSans-SemiBold";
   font-size: 1.2rem;
   padding-left: 6vw;
@@ -268,7 +260,7 @@ body {
 }
 
 .slide-paragraph-text {
-  color: #FFFFFF;
+  color: #e0e0e0;
   font-family: "PublicSans-Medium";
   font-size: 0.9rem;
   padding-left: 6vw;
@@ -282,7 +274,7 @@ body {
   margin: 20px auto;*/
   /*padding: 10px 50px 50px 50px;
   border-radius: 10px;*/
-  border: 2px solid #cbcbcb;
+  border: 2px solid #e0e0e0;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
   min-width: 200px;
   position: relative;
@@ -301,6 +293,7 @@ body {
   width: 100%;
   height: 100%;
   transition: transform 1s ease-in-out;
+  align-items: center;
   transform: translateX(100%);
 }
 
@@ -308,8 +301,15 @@ body {
   transform: translateX(0);
 }
 
+.slide-img {
+  flex: 1;
+  min-width: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .text-box {
-  flex: 2.5;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -320,25 +320,16 @@ body {
 }
 
 #slide-progress {
-  color: #FFFFFF;
+  color: #e0e0e0;
   font-family: "PublicSans-Medium";
-  font-size: 18px;
-}
-
-.slide-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  flex: 3;
-  width: 70px;
-  height: auto;
-  box-sizing: border-box;
+  font-size: 0.9rem;
 }
 
 .arrow {
   position: absolute;
   top: 50%;
   font-size: 24px;
-  color: #fff;
+  color: #e0e0e0;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 100%;
   cursor: pointer;
@@ -373,9 +364,9 @@ body {
   background-color: #d0c41e;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .slider-container {
-    height: 40em;
+    height: 50em;
   }
   .slide {
     flex-direction: column;
@@ -408,17 +399,17 @@ body {
 .quiz-container {
   max-width: 60vw;
   margin: 20px auto;
-  background-color: #fff;
+  background-color: #e0e0e0;
   padding: 10px 50px 50px 50px;
   border-radius: 10px;
-  border: 2px solid #cbcbcb;
+  border: 2px solid #e0e0e0;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
   min-width: 200px;
 }
 
 .quiz-container h1 {
   background: #3E3E3E;
-  color: #fff;
+  color: #e0e0e0;
   font-family: "PublicSans-SemiBold";
   font-size: 50px;
   text-align: center;
@@ -429,7 +420,7 @@ body {
 #question {
   font-family: "PublicSans-Medium";
   font-size: 20px;
-  color: #5a6772;
+  color: #5187b9;
 }
 
 .button-grp {
@@ -446,12 +437,12 @@ body {
   background: #3E3E3E;
   width: 200px;
   font-family: "PublicSans-Medium";
-  font-size: 16px;
-  border: 1px solid #1d3c6a;
+  font-size: 0.9rem;
+  border: 1px solid #5187b9;
   border-radius: 50px;
   margin: 10px;
   padding: 10px 10px;
-  color: #fff;
+  color: #e0e0e0;
 }
 
 #btn0:hover,
@@ -459,7 +450,7 @@ body {
 #btn2:hover,
 #btn3:hover {
   cursor: pointer;
-  background: #2D85A4;
+  background: #5187b9;
 }
 
 #btn0:focus,
@@ -470,17 +461,17 @@ body {
 }
 
 #progress {
-  color: #2b2b2b;
+  color: #222222;
   font-family: "PublicSans-Medium";
-  font-size: 18px;
+  font-size: 0.9rem;
 }
 
 .link {
-  color: #2387e4;
+  color: #5187b9;
   text-decoration: underline;
 }
 
 ul,
 li {
-  color: #FFFFFF;
+  color: #e0e0e0;
 }/*# sourceMappingURL=styles.css.map */

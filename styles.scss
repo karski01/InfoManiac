@@ -1,6 +1,7 @@
 $base-color: #222222;
 $bar-color: #3E3E3E;
-$text-color: #FFFFFF;
+$text-color: #e0e0e0;
+$link-color: #5187b9;
 $font-inika-R: 'Inika-Regular', 'Bitter SemiBold';
 $font-inika-B: 'Inika-Bold', 'Bitter SemiBold';
 $font-publicsans-SB: 'PublicSans-SemiBold';
@@ -61,7 +62,7 @@ html {
 .quote-txt {
     color: $text-color;
     font-family: $font-inika-R;
-    font-size: 1.2rem;
+    font-size: $subtitle-size;
     text-align: center;
     position: relative;
     margin-top: -2rem;
@@ -95,7 +96,7 @@ html {
     font-style: normal;
     font-size: 2em;
     line-height: 50px;
-    color: #fff;
+    color: $text-color;
 }
 
 #scroll-button:hover {
@@ -122,15 +123,6 @@ html {
     box-shadow: $box-shadow;
     margin: 0 auto;
 }
-
-/**a {
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-**/
 
 .menu-navbar {
     top: 0;
@@ -164,7 +156,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: $paragraph-size;
 }
 
 .menu-navbar li.active {
@@ -217,7 +209,7 @@ a:active {
 .button-text {
     color: $text-color;
     font-family: $font-inika-B;
-    font-size: 0.8rem;
+    font-size: $paragraph-size;
     text-decoration: none;
     position: relative;
 }
@@ -332,7 +324,7 @@ body {
     //background-color: #fff;
     /*padding: 10px 50px 50px 50px;
     border-radius: 10px;*/
-    border: 2px solid #cbcbcb;
+    border: 2px solid $text-color;
     box-shadow: $box-shadow;
     min-width: 200px;
     position: relative;
@@ -352,6 +344,7 @@ body {
     width: 100%;
     height: 100%;
     transition: transform 1s ease-in-out;
+    align-items: center;
     transform: translateX(100%);
 }
 
@@ -359,8 +352,14 @@ body {
     transform: translateX(0);
 }
 
+.slide-img {
+    flex: 1;
+    min-width: 0;
+    height: fit-content;
+}
+
 .text-box {
-    flex: 2.5;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -373,22 +372,14 @@ body {
 #slide-progress {
     color: $text-color;
     font-family: $font-publicsans-M;
-    font-size: 18px;
-}
-
-.slide-img {
-    object-fit: cover;
-    flex: 3;
-    width: 70px;
-    height: auto;
-    box-sizing: border-box;
+    font-size: $paragraph-size;
 }
 
 .arrow {
     position: absolute;
     top: 50%;
     font-size: 24px;
-    color: #fff;
+    color: $text-color;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 100%;
     cursor: pointer;
@@ -428,9 +419,9 @@ body {
 
 
 // Tablet 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .slider-container {
-        height: 40em;
+        height: 50em;
     }
 
     .slide {
@@ -478,17 +469,17 @@ body {
 .quiz-container {
     max-width: 60vw;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: $text-color;
     padding: 10px 50px 50px 50px;
     border-radius: 10px;
-    border: 2px solid #cbcbcb;
+    border: 2px solid $text-color;
     box-shadow: $box-shadow;
     min-width: 200px;
 }
 
 .quiz-container h1 {
     background: $bar-color;
-    color: #fff;
+    color: $text-color;
     font-family: $font-publicsans-SB;
     font-size: 50px;
     text-align: center;
@@ -499,7 +490,7 @@ body {
 #question {
     font-family: $font-publicsans-M;
     font-size: 20px;
-    color: #5a6772;
+    color: $link-color;
 }
 
 .button-grp {
@@ -516,12 +507,12 @@ body {
     background: $bar-color;
     width: 200px;
     font-family: $font-publicsans-M;
-    font-size: 16px;
-    border: 1px solid #1d3c6a;
+    font-size: $paragraph-size;
+    border: 1px solid $link-color;
     border-radius: 50px;
     margin: 10px;
     padding: 10px 10px;
-    color: #fff;
+    color: $text-color;
 }
 
 #btn0:hover,
@@ -529,7 +520,7 @@ body {
 #btn2:hover,
 #btn3:hover {
     cursor: pointer;
-    background: #2D85A4;
+    background: $link-color;
 }
 
 #btn0:focus,
@@ -540,9 +531,9 @@ body {
 }
 
 #progress {
-    color: #2b2b2b;
+    color: $base-color;
     font-family: $font-publicsans-M;
-    font-size: 18px;
+    font-size: $paragraph-size;
 }
 
 
@@ -551,7 +542,7 @@ body {
 
 
 .link {
-    color: #2387e4;
+    color: $link-color;
     text-decoration: underline;
 }
 
